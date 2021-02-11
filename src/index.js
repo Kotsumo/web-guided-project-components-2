@@ -1,5 +1,6 @@
 // Imports at the top of the file!
 // We never nest imports inside blocks of code!
+import axios from 'axios'
 
 
 // 👉 TASK 1- Test out the following endpoints:
