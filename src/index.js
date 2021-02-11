@@ -69,7 +69,7 @@ function dogCardMaker({ imageURL, breed }) {
 //    * ON SUCCESS: use the data to create dogCards and append them to the entry point
 //    * ON FAILURE: log the error to the console
 //    * IN ANY CASE: log "done" to the console
-axios.get('https://dog.ceo/api/breed/pizza/images/random/7')
+axios.get('https://dog.ceo/api/breed/germanshepherd/images/random/7')
   .then(res => {
 
     debugger
