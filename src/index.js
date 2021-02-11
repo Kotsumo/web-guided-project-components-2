@@ -18,7 +18,7 @@ import axios from 'axios'
 //  * With JS using the native fetch [STRETCH]
 axios.get('https://lambda-times-api.herokuapp.com/friends')
   .then(response => {
-    console.log(response)
+    console.log(response.data)
   })
   .catch()
 
