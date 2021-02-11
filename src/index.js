@@ -70,14 +70,15 @@ function dogCardMaker({ imageURL, breed }) {
 //    * ON FAILURE: log the error to the console
 //    * IN ANY CASE: log "done" to the console
 axios
-  .get( `https://dog.ceo/api/breed/corgi/images/random/10` )
+  .get( `https://dog.ceo/api/breed/corgi/images/random/1` )
   .then(( response ) => {
     const images = response.data.message;
-    console.log( response.data.message );
+
     images.forEach(( image ) => {
       const dogCard = dogCardMaker({ imageURL: image, breed: "corgi" });
       entryPoint.append( dogCard );
     });
+
   })
   .catch(( err ) => {
     console.log( err, "this is the error");
@@ -87,6 +88,20 @@ axios
   }) 
 // 👉 (OPTIONAL) TASK 6- Wrap the fetching operation inside a function `getDogs`
 // that takes a breed and a count (of dogs)
+function getDogs(breed, count) {
+  axios.get(`https://dog.ceo/api/breed/${breed}/images/random/${count}`)
+    .then(response => {
+      const images = response.data.message;
+
+      images.forEach(( image ) => {
+        const dogCard = dogCardMaker({ imageURL: image, breed: "corgi" });
+        entryPoint.append( dogCard );
+      });
+    })
+    .catch(err => {
+      console.log(err);
+    })
+}
 
 
 // 👉 (OPTIONAL) TASK 7- Put a button in index.html to 'get dogs' and add a click
