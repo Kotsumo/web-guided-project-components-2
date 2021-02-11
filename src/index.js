@@ -72,8 +72,8 @@ function dogCardMaker({ imageURL, breed }) {
 axios
   .get( `https://dog.ceo/api/breed/corgi/images/random/10` )
   .then(( response ) => {
-    console.log( response );
     const images = response.data.message;
+    console.log( response.data.message );
     images.forEach(( image ) => {
       const dogCard = dogCardMaker({ imageURL: image, breed: "corgi" });
       entryPoint.append( dogCard );
