@@ -81,7 +81,10 @@ axios
   })
   .catch(( err ) => {
     console.log( err, "this is the error");
-  }
+  })
+  .then(() => {
+    console.log('done');
+  }) 
 // 👉 (OPTIONAL) TASK 6- Wrap the fetching operation inside a function `getDogs`
 // that takes a breed and a count (of dogs)
 
