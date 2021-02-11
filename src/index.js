@@ -108,7 +108,14 @@ getDogs('boxer', 2)
 
 // 👉 (OPTIONAL) TASK 7- Put a button in index.html to 'get dogs' and add a click
 // event listener that executes `getDogs`
-
+const makeDogButton = document.createElement('button');
+const buttonEntry = document.querySelector('.container h3');
+makeDogButton.textContent = "Get More Dogs"
+makeDogButton.style.display = 'block';
+buttonEntry.appendChild(makeDogButton);
+makeDogButton.addEventListener('click', event => {
+  getDogs('wolfhound', '10');
+})
 
 // 👉 (OPTIONAL) TASK 8- Import the breeds from `breeds.js`
 // or request them from https://lambda-times-api.herokuapp.com/breeds
