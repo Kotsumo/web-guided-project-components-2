@@ -23,6 +23,9 @@ axios.get('https://lambda-times-api.herokuapp.com/pizza')
   .catch(err => {
     console.log(err)
   })
+  .then(() => {
+    console.log('Always fire ')
+  })
 
 
 
