@@ -69,18 +69,19 @@ function dogCardMaker({ imageURL, breed }) {
 //    * ON SUCCESS: use the data to create dogCards and append them to the entry point
 //    * ON FAILURE: log the error to the console
 //    * IN ANY CASE: log "done" to the console
-axios.get('https://dog.ceo/api/breed/germanshepherd/images/random/7')
-  .then(res => {
-
-    debugger
+axios
+  .get( `https://dog.ceo/api/breed/corgi/images/random/10` )
+  .then(( response ) => {
+    const images = response.data.message;
+    images.forEach(( image ) => {
+      const dogCard = dogCardMaker({ imageURL: image, breed: "corgi" });
+      console.log( dogCard );
+      entryPoint.append( dogCard );
+    });
   })
-  .catch(err => {
-    debugger
-  })
-  .then(() => {
-    console.log();
-  })
-
+  .catch(( err ) => {
+    console.log( err, "this is the error");
+  }
 // 👉 (OPTIONAL) TASK 6- Wrap the fetching operation inside a function `getDogs`
 // that takes a breed and a count (of dogs)
 
