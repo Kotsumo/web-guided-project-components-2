@@ -16,7 +16,8 @@ import axios from 'axios'
 //  * With Postman (HTTP Client with GUI)
 //  * With Chrome and the Network Tab
 //  * With JS using the native fetch [STRETCH]
-console.log(axios.get('https://lambda-times-api.herokuapp.com/friends'))
+const result = axios.get('https://lambda-times-api.herokuapp.com/friends')
+console.log(result)
 
 
 // 👉 TASK 2- Select the "entry point", the element
