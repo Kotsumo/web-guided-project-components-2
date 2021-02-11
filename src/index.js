@@ -94,7 +94,7 @@ function getDogs(breed, count) {
       const images = response.data.message;
 
       images.forEach(( image ) => {
-        const dogCard = dogCardMaker({ imageURL: image, breed: "corgi" });
+        const dogCard = dogCardMaker({ imageURL: image, breed: breed });
         entryPoint.append( dogCard );
       });
     })
@@ -102,7 +102,7 @@ function getDogs(breed, count) {
       console.log(err);
     })
 }
-getDogs('corgi', 7)
+getDogs('boxer', 7)
 
 
 // 👉 (OPTIONAL) TASK 7- Put a button in index.html to 'get dogs' and add a click
