@@ -16,22 +16,23 @@ import axios from 'axios'
 //  * With Postman (HTTP Client with GUI)
 //  * With Chrome and the Network Tab
 //  * With JS using the native fetch [STRETCH]
-axios.get('https://lambda-times-api.herokuapp.com/pizza')
-  .then(response => {
-    console.log(response.data)
-  })
-  .catch(err => {
-    console.log(err)
-  })
-  .then(() => {
-    console.log('Always fire ')
-  })
+// axios.get('https://lambda-times-api.herokuapp.com/pizza')
+//   .then(response => {
+//     console.log(response.data)
+//   })
+//   .catch(err => {
+//     console.log(err)
+//   })
+//   .then(() => {
+//     console.log('Always fire ')
+//   })
 
 
 
 // 👉 TASK 2- Select the "entry point", the element
 // inside of which we'll inject our dog cards 
-const entryPoint = null
+const entryPoint = document.querySelector(".entry")
+console.log(entryPoint);
 
 
 // 👉 TASK 3- `dogCardMaker` takes an object and returns a Dog Card.
