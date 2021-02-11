@@ -102,7 +102,8 @@ function getDogs(breed, count) {
       console.log(err);
     })
 }
-getDogs('boxer', 7)
+getDogs('boxer', 2)
+getDogs('germanshepherd', 3)
 
 
 // 👉 (OPTIONAL) TASK 7- Put a button in index.html to 'get dogs' and add a click
