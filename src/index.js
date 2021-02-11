@@ -116,6 +116,11 @@ getDogs('boxer', 2)
 // makeDogButton.addEventListener('click', event => {
 //   getDogs('wolfhound', '10');
 // })
+document.querySelector('button').addEventListener('click', evt => {
+  getDogs('mastiff', 3)
+  getDogs('appenzeller', 3)
+})
+
 
 // 👉 (OPTIONAL) TASK 8- Import the breeds from `breeds.js`
 // or request them from https://lambda-times-api.herokuapp.com/breeds
